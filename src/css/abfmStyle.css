@@ -1,0 +1,682 @@
+
+/******************* IMPORTS *******************/
+  @import url('https://fonts.googleapis.com/css2?family=Alata&family=Archivo+Black&family=Comfortaa:wght@300;400&family=Krona+One&family=Montserrat:wght@200&family=Rammetto+One&family=Righteous&family=Rubik+Mono+One&display=swap');
+  /*
+    font-family: 'Alata', sans-serif; ---> body 
+    font-family: 'Archivo Black', sans-serif; ---> body 
+    font-family: 'Comfortaa', cursive; 
+    font-family: 'Krona One', sans-serif; ---> title 4
+    font-family: 'Montserrat', sans-serif; ---> small
+    font-family: 'Rammetto One', cursive;  ---> title 1
+    font-family: 'Righteous', cursive; ---> title 2
+    font-family: 'Rubik Mono One', sans-serif; ---> title 3
+  */
+
+/******************* GENERAL *******************/
+body{
+    background: #99FFCC;
+    scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  *{
+    scrollbar-width: auto;
+    scrollbar-color: #9cffe1 transparent;
+  }
+
+  body{
+    scrollbar-width: auto;
+    scrollbar-color: #000000 transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  *::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb{
+    background-color: #9cffe1;
+    border-radius: 10px;
+    border: 2px none none;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+    border: 2px none none;
+  }
+
+  *::-webkit-scrollbar-thumb:hover{
+    background-color: #575757;
+    border-radius: 10px;
+    border: 2px none none;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #575757;
+    border-radius: 10px;
+    border: 2px none none;
+  }
+
+.body-dotted{
+  background-color: whitesmoke;
+  background-image: radial-gradient(black 5%, transparent 5%),
+                    radial-gradient(black 5%, transparent 5%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+nav{
+
+    font-family: 'Rammetto One', cursive;
+    color: black;
+    background: transparent;
+
+    margin: 2.5%;
+}
+
+main{
+
+    font-family: 'Archivo Black', sans-serif;
+    color: whitesmoke;
+
+    padding: 5%;
+    padding-top: 30%;
+    height: 100%;
+}
+
+footer{
+
+    font-family: 'Alata', sans-serif;
+
+    background: transparent;
+
+    bottom: 0;    
+    width: 100%;
+}
+
+
+
+/******************* CUSTOM *******************/
+.card-title,
+.menuTitle{
+    font-family: 'Rammetto One', cursive;
+    color: whitesmoke;
+}
+
+.small{
+
+    font-size: 0.75vw;
+}
+
+/*--------------- nav ---------------*/
+.navbarTogglerButton,
+.navbarTogglerButton:focus,
+.navbarTogglerButton:active,
+.navbarTogglerButton:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+#collapsedBars{
+    padding-left: 60%;
+}
+
+
+/*--------------- main ---------------*/
+.card{
+    
+    background-color: black;
+
+    border-radius: 50px;
+    height: fit-content;
+    padding: 5%;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.card-transparent{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-body{
+
+    font-family: 'Archivo Black', sans-serif;
+    color: whitesmoke;
+    
+    padding: 5%;
+}
+
+.card-title{
+
+    font-family: 'Rammetto One', cursive;
+    color: whitesmoke;    
+    font-size: 5vw;    
+}
+
+.card-separator{
+
+    background: whitesmoke;
+    width: 100%;
+    height: 15px;
+}
+
+#profilePhoto{
+    
+    width: 30%;
+
+    position: relative;
+    float: left;
+    margin-right: 70px;
+
+}
+
+.workPlace-photo{
+
+    width: 50%;
+    margin-right: 70px;
+
+}
+.workPlace-name{
+
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1.5vw;
+    text-decoration-line: underline;
+
+    
+    
+}
+.workPlace-description{
+    margin-left: 50px;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #skills-container .image {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+  }
+  
+  #skills-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+  .img-projects {
+    float: left;
+  }
+  
+  #projectsMenu {
+    float: right;    
+  }
+  
+  @media (min-width: 768px) {
+    .container::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    .img-projects {
+      float: left;
+      width: 50%;
+    }
+  
+    #projectsMenu {
+      float: right;
+      width: 50%;
+    }
+  }
+  
+  .img-projects img{
+    border-radius: 0px 30px 0px 0px;
+  }
+  #projectsMenu ul{
+    font-family: 'Righteous', cursive;
+    font-size: 2vw;
+    height: 500px;
+    overflow-y: scroll;
+    list-style-type: none;
+  }
+
+  #projectsMenu ul li{
+    margin: 15px;
+}
+
+
+/*--------------- goUp ---------------*/
+#btn-goUp {
+
+    border-radius: 100%;
+    border-color: none;
+
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    z-index: 200;
+    font-size: 1vw;
+
+    display: none;
+
+  }
+  
+  #btn-goUp:hover {
+
+    color: whitesmoke;
+    background-color: #000000;
+
+  }
+
+/*--------------- footer ---------------*/
+
+
+
+/*--------------- E X P E R I E N C E ---------------*/
+
+.badge{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.badge-HTML{
+  font-size: 1.5vw;
+  background-color: rgb(172, 172, 0);  
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-CSS{
+  font-size: 1.5vw;
+  background-color: rgb(172, 172, 0);
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-JavaScript{
+  font-size: 1.5vw;
+  background-color: rgb(172, 172, 0);
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-ThreeJS{
+  font-size: 1.5vw;
+  background-color: rgb(172, 172, 0);
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-Blender{
+  font-size: 1.5vw;
+  background-color: orange;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+
+.badge-CSharp{
+  font-size: 1.5vw;
+  background-color: blue;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-3DMax{
+  font-size: 1.5vw;
+  background-color: blueviolet;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-Unity{
+  font-size: 1.5vw;
+  background-color: gray;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-Oculus{
+  font-size: 1.5vw;
+  background-color: green;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-OpenCV{
+  font-size: 1.5vw;
+  background-color: crimson;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-OpenGL{
+  font-size: 1.5vw;
+  background-color:fuchsia;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-HLSL{
+  font-size: 1.5vw;
+  background-color: palevioletred;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-GLSL{
+  font-size: 1.5vw;
+  background-color: rgb(212, 124, 139);
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-C{
+  font-size: 1.5vw;
+  background-color: cadetblue;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-Java{
+  font-size: 1.5vw;
+  background-color: green;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-H2DB{
+  font-size: 1.5vw;
+  background-color: darkseagreen;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+.badge-MathLab{
+  font-size: 1.5vw;
+  background-color: tomato;
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;    
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hide {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.show {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+
+#ProjectDetailedImage{
+  width: 40%;
+  size: 15%;
+  border-radius: 80px;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.back-button {
+  border-radius: 100px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  font-size: 1vw;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.back-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.projectDetails-title-general{
+  margin-top: 10%;
+}
+.projectDetails-title{
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 3vw;
+  width: 100%;
+}
+
+.projectDetails-year{
+  font-size: 2vw;
+  float: left;
+}
+
+.projectDetails-badges{
+  float: right;
+}
+
+
+.projectsDetails-subtitle{
+  font-family: 'Rubik Mono One', sans-serif;
+  text-decoration-line: underline; 
+  font-size: 1.5vw;
+}
+.projectDetails-content{
+  font-family: 'Alata', sans-serif;
+  font-size: 1.5vw;
+}
+
+.projectDetails-description{
+  font-family: 'Alata', sans-serif;
+  font-size: 1.5vw;
+}
+
+.projectsDetails-myWork-workList{
+  list-style-type: none;
+}
+
+.projectDetails-trailer-video-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+.projectsDetails-myWork-workList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projectDetails-myWork-img {
+  width: 35%;
+  margin-right: 20px; 
+}
+
+#ProjectDetailsWindow{
+  margin-top: -32.5%;
+  display: none;
+}
+
+.projectDetails-row{
+  margin-bottom: 50px;
+}
+
+
+
+
+#skills-container .image{
+  position: relative;
+}
+#skills-container .image:not(:hover) {
+  animation: shrink 0.5s ease forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+#skills-container .image {
+  transition: transform 0.25s;
+}
+#skills-container .image {
+  animation: floating 3s ease infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#skills-container .image::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+#skills-container .image:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+
+.btn-projectsMenu{
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+.btn-projectsMenu:hover{
+  background-color: rgba(245, 245, 245, 0.527);
+  color: black;
+  border: none;
+  
+}
+
+.div-btn-projectsMenu:hover{
+  border-radius: 20px;
+  background-color: rgba(179, 255, 236, 0.185);
+}
